@@ -1,0 +1,245 @@
+@charset "utf-8";
+body{
+    width: 100%;
+    height: 100%;
+    min-height: 850px;
+    background-color: #ebebeb;
+}
+/*  头部Logo  */
+.logo{
+    height: 70px;
+}
+.logo a{
+    float: left;
+    margin-left: 70px;
+}
+.logo a > img{
+    margin-top: 12px;
+}
+.logo p{
+    float: left;
+    padding-top: 25px;
+    margin-left: 15px;
+    font-size: 18px;
+}
+.logo p > b{
+    margin-right: 15px;
+    color: #ccc;
+}
+/*  中部content  */
+.content{
+    height: 590px;
+    background-color: #081638;
+}
+.login-bg{
+    height: 590px;
+    background: url("../images/login/login_bg.png") no-repeat 0 0;
+}
+.login{
+    position: absolute;
+    top: 30px;
+    right: 70px;
+    width: 380px;
+    height: 530px;
+    background-color: #fff;
+}
+.login-nav{
+    width: 100%;
+    margin: 24px auto;
+    font-size: 0;
+}
+.login-nav > span {
+    display: inline-block;
+    width: 169px;
+    padding: 0 10px;
+    color: #333;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.login-nav > span:hover{
+    color: #B40707;
+}
+.login-nav > span + span{
+    border-left: 1px solid #ccc;
+}
+.login-nav > .account{
+    color: #B40707;
+}
+/*  账号登录  */
+.login-input{
+    display: block;
+    margin: 0 25px;
+    padding-top: 20px;
+}
+.login-input form > input{
+    width:100%;
+    height: 46px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    line-height: 46px;
+    font-size: 14px;
+}
+.login-input form > input:nth-child(3){
+    width: 13px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.login-input form > label {
+    font-size: 12px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.login-input form > button{
+    width: 100%;
+    height: 46px;
+    background-color: #B40707;
+    border: 0;
+    outline: none;
+    border-radius: 26px;
+    color: #fff;
+    cursor: pointer;
+}
+.login-input form > button:hover{
+    background-color: #C70000;
+}
+.login-more{
+    line-height: 46px;
+    font-size: 12px;
+    text-align: right;
+}
+.login-input form a{
+    color: #007dff;
+}
+.login-input form a:hover{
+    color: #0064cc;
+}
+.zhuce{
+    text-align: center;
+    font-size: 0;
+}
+.zhuce a {
+    padding: 0 10px;
+}
+.zhuce a + a{
+    border-left: 1px solid #ccc;
+}
+.login-other{
+    position: absolute;
+    width: 330px;
+    bottom: 15px;
+}
+.other-head{
+    height: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #ccc;
+    font-size: 0;
+}
+.other-head > i,.other-head >span{
+    display: inline-block;
+    vertical-align: middle;
+}
+.other-head > i{
+    width: 94px;
+    height: 1px;
+}
+.other-head > i:nth-child(1){
+    background: url("../images/login/line-left.png") no-repeat 0 0;
+}
+.other-head > i:nth-child(3){
+    background: url("../images/login/line-right.png") no-repeat 0 0;
+}
+.other-head span{
+    font-size: 12px;
+    padding: 0 25px;
+}
+.other-icon{
+    width: 330px;
+    text-align: center;
+    font-size: 0;
+}
+.other-icon > a{
+    display: inline-block;
+    width: 44px;
+    height: 40px;
+    margin: 0 10px;
+    background: url("../images/login/login_icon.png") no-repeat 0 0;
+}
+.other-icon > a:nth-child(1){
+    background-position: -70px -10px;
+}
+.other-icon > a:nth-child(1):hover{
+    background-position: -70px -56px;
+}
+.other-icon > a:nth-child(2){
+    background-position: -130px -10px;
+}
+.other-icon > a:nth-child(2):hover{
+    background-position: -130px -56px;
+}
+.other-icon > a:nth-child(3){
+    background-position: -10px -10px;
+}
+.other-icon > a:nth-child(3):hover{
+    background-position: -10px -56px;
+}
+/*  扫码登录  */
+.login-code{
+    display: none;
+}
+.qr-code{
+    position: relative;
+    width: 100%;
+    height: 318px;
+}
+.code-img{
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: 109px;
+    margin: auto 0;
+    width: 150px;
+    height: 150px;
+    padding: 5px;
+    border: 1px solid #999;
+    background-color: #fff;
+    z-index: 1;
+    transition: all 0.4s;
+}
+.code-phone{
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    bottom: 50%;
+    right: 20px;
+    margin: auto 0;
+    transition: all 0.4s;
+}
+.qr-code:hover > .code-img{
+    left: 30px;
+}
+.qr-code:hover > .code-phone{
+    opacity: 1;
+}
+.qr-text{
+    font-size: 12px;
+    text-align: center;
+}
+.qr-text span {
+    color: #007dff;
+}
+/*  底部foot  */
+.foot{
+    padding-top: 20px;
+}
+.foot p{
+    margin-top: 10px;
+    color: #999;
+    font-size: 12px;
+    text-align: center;
+}
+.foot p > a:hover{
+    text-decoration: underline;
+}

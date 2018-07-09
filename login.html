@@ -1,0 +1,130 @@
+<!doctype html><!--声明文档类型为html-->
+<html lang="en"><!--根标签 超文本标记语言-->
+<head><!--头部 不可视化标签-->
+    <meta charset="UTF-8"><!--utf-8 国际编码-->
+    <!--网页三要素-->
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <link rel="shortcut icon" href="images/favicon.ico" type="img/x-ico"/>
+    <title>登录</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+    <div id="huawei">
+        <div class="head">
+            <div class="box">
+                <div class="logo clearfix">
+                    <a href="index.html">
+                        <img src="images/login/LoginLogo.png" alt="VMall">
+                    </a>
+                    <p><b>|</b>华为商城</p>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="box login-bg">
+                <div class="login">
+                    <div class="login-nav">
+                        <span class="account">账号登录</span>
+                        <span class="scan">扫码登录</span>
+                    </div>
+                    <div class="login-input">
+                        <form action="#" name="login">
+                            <input type="text" id="username" placeholder="手机号/邮箱地址">
+                            <input type="password" id="password" placeholder="密码">
+                            <input type="checkbox" id="remember">
+                            <label for="remember">记住华为账号</label>
+                            <button id="lgbtn">登录</button>
+                            <p class="login-more">
+                                <a href="javascript:;">更多</a>
+                            </p>
+                            <p class="zhuce">
+                                <a href="javascript:;">注册账号</a>
+                                <a href="javascript:;">忘记密码？</a>
+                            </p>
+                        </form>
+                        <div class="login-other">
+                            <div class="other-head">
+                                <i class="line-left"></i>
+                                <span>其他方式登录</span>
+                                <i class="line-right"></i>
+                            </div>
+                            <div class="other-icon">
+                                <a href="javascript:;"></a>
+                                <a href="javascript:;"></a>
+                                <a href="javascript:;"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="login-code">
+                        <div class="qr-code">
+                            <img src="images/login/qrcode.png" alt="" class="code-img" >
+                            <img src="images/login/qrCode-help.png" alt="" class="code-phone">
+                        </div>
+                        <div class="qr-text">
+                            <p>使用<span>华为移动服务APP</span>扫一扫</p>
+                            <p>若您使用华为手机，请进入“设置”>“华为帐号”扫码登录。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="foot">
+            <div class="box">
+                <p>
+                    <a href="javascript:;">华为帐号用户协议 </a> |
+                    <a href="javascript:;">关于华为帐号与隐私的声明 </a> |
+                    <a href="javascript:;"> 常见问题</a>
+                </p>
+                <p>Copyright © 2011-2018 华为技术有限公司 版权所有 保留一切权利  苏B2-20070200号 | 苏ICP备09062682号-9 </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        (function () {
+            var oLogin = document.getElementsByClassName('login-input')[0],
+                oQrcode = document.getElementsByClassName('login-code')[0],
+                oAccount = document.getElementsByClassName('account')[0],
+                oScan = document.getElementsByClassName('scan')[0];
+            oAccount.onclick = function () {
+                this.style.color = '#B40707';
+                oScan.style.color = '#333';
+                oLogin.style.display = 'block';
+                oQrcode.style.display = 'none';
+            };
+            oScan.onclick = function () {
+                this.style.color = '#B40707';
+                oAccount.style.color = '#333';
+                oQrcode.style.display = 'block';
+                oLogin.style.display = 'none';
+            }
+        })();
+
+        $(function () {
+            $('#lgbtn').click(function () {
+                var username = $('#username').val();
+                var password = $('#password').val();
+                var user={username:username,password:password};
+                login(user);
+            })
+        });
+        function login(user){
+            console.log(user);
+            var url='/user/login';
+            $.post(url,user,function(data){
+                console.log(data);
+                if(data){
+                    data=JSON.parse(data);
+                    if(data.bresult){
+                        window.location.href='/index.html';
+                    }
+                }
+            });
+        }
+
+
+    </script>
+</body>
+</html>

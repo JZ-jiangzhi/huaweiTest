@@ -1,0 +1,42 @@
+@charset "utf-8";
+body,ul,li,ol,dl,dd,dt,h1,h2,h3,h4,h5,h6,div,form,input,a,p{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+}
+#huawei{
+    overflow-x: hidden;
+    min-width: 1200px;
+}
+ul{
+    list-style: none;
+}
+img{
+    vertical-align: middle;
+}
+a{
+    text-decoration: none;
+    color: #a4a4a4;
+    font-size: 12px;
+}
+.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.box{
+    position: relative;
+    width: 1202px;
+    margin: 0 auto;
+}
+.hover-move{
+    position: relative;
+    top: 0px;
+    transition:top .3s;
+}
+.hover-move:hover{
+    top: -2px;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.15);
+}

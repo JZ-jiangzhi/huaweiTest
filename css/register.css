@@ -1,0 +1,185 @@
+@charset "utf-8";
+body{
+    width: 100%;
+    height: 100%;
+    min-height: 850px;
+    background-color: #ebebeb;
+}
+.register-box{
+    position: relative;
+    width: 960px;
+    margin: 0 auto;
+}
+/*  头部logo  */
+.head{
+    background-color: #333;
+}
+.logo{
+    height: 70px;
+}
+.logo a{
+    float: left;
+    /*margin-left: 70px;*/
+}
+.logo a > img{
+    margin-top: 12px;
+}
+.logo p{
+    float: left;
+    padding-top: 20px;
+    margin-left: 20px;
+    font-size: 18px;
+    color: #fff;
+}
+.logo p > b{
+    display: inline-block;
+    width: 1px;
+    height: 18px;
+    margin-right: 15px;
+    background-color: #fff;
+    vertical-align: middle;
+}
+/*  中部内容  */
+/*  内容头部  */
+.title{
+    margin-top: 30px;
+    font-size: 0;
+}
+.title > a {
+    position: relative;
+    display: inline-block;
+    margin-right: 12px;
+    width: 145px;
+    height: 35px;
+    background-color: #B40707;
+}
+.title  > a + a{
+    background-color: #ccc;
+}
+.title a > i{
+    position: absolute;
+    display: inline-block;
+    background-image: url("../images/login/register-icon.png");
+}
+.phone{
+    top: 7px;
+    left: 26px;
+    width: 14px;
+    height: 22px;
+    background-position: 0 -18px;
+}
+.email{
+    top: 9px;
+    left: 16px;
+    width: 22px;
+    height: 17px;
+    background-position: 0 0;
+}
+.title a > span{
+    display: inline-block;
+    margin-left: 50px;
+    height: 35px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 35px;
+    text-align: center;
+}
+.title p{
+    float: right;
+    margin-top: 10px;
+    font-size: 14px;
+}
+.title p > a{
+    margin-left: 10px;
+    color: #007dff;
+    font-size: 14px;
+}
+/*  内容表单  */
+.form{
+    width: 100%;
+    background-color: #fff;
+}
+/*  手机注册  */
+.phone-list{
+    width: 420px;
+    padding: 40px 0 60px;
+
+    margin:auto;
+    border: 1px solid red;
+}
+.phone-list > li{
+    position: relative;
+    width: 100%;
+    height: 42px;
+    margin-bottom: 10px;
+    background-color: #f7f7f7;
+    border: 1px solid #d9d9d9;
+    border-radius: 21px;
+    font-size: 0;
+}
+.phone-list .list-down{
+    margin-bottom: 30px;
+}
+.phone-list > li > span{
+    display: inline-block;
+    height: 42px;
+    line-height: 42px;
+}
+.pl-left{
+    width: 90px;
+    padding: 0 16px;
+    border-right: 1px solid #d9d9d9;
+    text-align: justify;
+    text-align-last: justify;
+    font-size: 14px;
+}
+.num{
+    text-align-last: left;
+}
+.pl-right{
+    width: 277px;
+    padding-left: 20px;
+    font-size: 16px;
+}
+.down{
+    position: absolute;
+    top: 19px;
+    width: 12px;
+    height: 6px;
+    background: url("../images/login/down.png") no-repeat 0 0;
+}
+.down1{
+    right: 16px;
+}
+.down2{
+    left: 93px;
+}
+.list-input{
+    width: 150px;
+    height: 28px;
+    border: none;
+    background-color: transparent;
+    line-height: 42px;
+    outline: none;
+}
+.phone-list > li:last-child{
+    margin-bottom: 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    font-size: 0;
+    text-align: center;
+}
+.register-btn{
+    width: 200px;
+    height: 42px;
+    background-color: #B40707;
+    border: none;
+    border-radius: 26px;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+}
+.register-btn:hover{
+    background-color: #C70000;
+}
